@@ -1,0 +1,77 @@
+{
+  "name": "@vonNewman/agent",
+  "version": "0.0.1",
+  "description": "vonNewman - Enterprise AI Agent",
+  "license": "MIT",
+  "author": "Rod Mamin",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@8.15.1",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "NODE_OPTIONS=--no-deprecation pnpm --filter @vonNewman/cli dev",
+    "clean": "pnpm -r clean",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check --apply .",
+    "start": "NODE_OPTIONS=--no-deprecation pnpm --filter @vonNewman/cli start start",
+    "cli": "NODE_OPTIONS=--no-deprecation pnpm --filter @vonNewman/cli start",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "cli:dev": "pnpm --filter @vonNewman/cli link-dev",
+    "cli:unlink": "pnpm --filter @vonNewman/cli unlink"
+  },
+  "dependencies": {
+    "@anush008/tokenizers": "^0.0.0",
+    "@anush008/tokenizers-linux-x64-gnu": "^0.0.0",
+    "@elizaos/adapter-sqlite": "0.1.9",
+    "@elizaos/client-telegram": "0.1.9",
+    "@elizaos/core": "0.1.9",
+    "@elizaos/plugin-bootstrap": "0.1.9",
+    "@vonNewman/client-terminal": "workspace:*",
+    "@vonNewman/core": "workspace:*",
+    "@vonNewman/plugin-knowledge-manager": "workspace:*",
+    "@tavily/core": "^0.0.2",
+    "better-sqlite3": "^11.6.0",
+    "optional": "^0.1.4",
+    "sharp": "^0.33.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@swc/core": "^1.10.11",
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.17.16",
+    "concurrently": "^9.1.2",
+    "jest": "^29.7.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "10.9.2",
+    "tsx": "^4.7.0",
+    "turbo": "^2.3.4",
+    "typescript": "^5.6.3",
+    "tsup": "^8.0.2"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8.15.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Project-vonNewman/vonNewman.git"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "enterprise",
+    "cli",
+    "knowledge-base",
+    "rag",
+    "groq",
+    "typescript"
+  ]
+}

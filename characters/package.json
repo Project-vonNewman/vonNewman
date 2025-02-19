@@ -1,0 +1,20 @@
+{
+  "name": "@vonNewman/characters",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/default_character.js",
+  "module": "dist/default_character.js",
+  "types": "dist/default_character.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/default_character.d.ts",
+      "import": "./dist/default_character.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@elizaos/core": "0.1.9"
+  }
+} 

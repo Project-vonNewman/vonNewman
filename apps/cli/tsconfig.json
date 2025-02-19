@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "outDir": "dist",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@vonNewman/*": ["../../packages/*/src"]
+    }
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+} 

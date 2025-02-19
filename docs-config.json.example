@@ -1,0 +1,15 @@
+{
+  "sources": [
+    {
+      "path": "./docs",
+      "recursive": true,
+      "fileTypes": [".md", ".mdx"]
+    },
+    {
+      "path": "./wiki",
+      "recursive": false,
+      "fileTypes": [".md"]
+    }
+  ],
+  "defaultFileTypes": [".md"]
+} 

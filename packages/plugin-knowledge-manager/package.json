@@ -1,0 +1,43 @@
+{
+  "name": "@vonNewman/plugin-knowledge-manager",
+  "version": "0.0.1",
+  "description": "Knowledge Manager Plugin for vonNewman",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "swc src -d dist",
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "test": "jest",
+    "clean": "rm -rf dist .turbo",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@elizaos/core": "0.1.9",
+    "@vonNewman/core": "workspace:*",
+    "better-sqlite3": "^11.6.0",
+    "glob": "^10.3.10"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.3.10",
+    "@swc/core": "^1.4.0",
+    "@types/node": "^20.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "@vonNewman/core": "workspace:*"
+  }
+}

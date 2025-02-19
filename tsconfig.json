@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "esModuleInterop": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "noEmit": true,
+        "allowJs": true,
+        "types": ["node"],
+        "typeRoots": ["./node_modules/@types", "./src/types"],
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    },
+    "files": [],
+    "references": [
+        { "path": "packages/core" },
+        { "path": "packages/client-terminal" },
+        { "path": "packages/plugin-knowledge-manager" }
+    ]
+}

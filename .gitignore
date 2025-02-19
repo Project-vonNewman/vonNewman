@@ -1,0 +1,7 @@
+.env
+node_modules/
+db.sqlite
+dist/
+docs-config.json
+.turbo/
+tsconfig.tsbuildinfo

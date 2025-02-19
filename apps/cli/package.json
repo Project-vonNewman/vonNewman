@@ -1,0 +1,55 @@
+{
+  "name": "@vonNewman/cli",
+  "version": "0.0.1",
+  "description": "Command-line interface for vonNewman - Enterprise AI Agent",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "vonNewman": "./dist/index.js",
+    "vonNewman-dev": "./src/index.ts"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --external better-sqlite3 && chmod +x dist/index.js",
+    "start": "tsx src/index.ts",
+    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "cli": "node dist/index.js",
+    "clean": "rimraf dist .turbo node_modules",
+    "typecheck": "tsc --noEmit",
+    "link-dev": "pnpm link --global && chmod +x src/index.ts",
+    "unlink": "pnpm unlink --global"
+  },
+  "keywords": [
+    "cli",
+    "ai",
+    "agent",
+    "vonNewman"
+  ],
+  "author": "Rod Mamin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Project-vonNewman/vonNewman.git"
+  },
+  "dependencies": {
+    "@elizaos/core": "0.1.9",
+    "@vonNewman/core": "workspace:*",
+    "@vonNewman/client-terminal": "workspace:*",
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1",
+    "better-sqlite3": "^11.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "rimraf": "^5.0.0",
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8.15.1"
+  }
+}

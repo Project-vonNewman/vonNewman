@@ -1,0 +1,13 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "sourceMap": true,
+        "declaration": false,
+        "removeComments": false
+    },
+    "ts-node": {
+        "experimentalSpecifierResolution": "node",
+        "transpileOnly": true,
+        "esm": true
+    }
+} 
